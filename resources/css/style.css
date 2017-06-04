@@ -1,6 +1,22 @@
 /* HTML */
 html {
+  color: #4A4A4A;
+  font-family: sans-serif;
   /*font-size: 16px;*/
+}
+
+.moldure {
+  border-left: 1px solid #A9AAAD;
+  border-right: 1px solid #A9AAAD;
+}
+
+.container {
+  width: 60%;
+  overflow: hidden;
+}
+
+.wrapper {
+  height: auto;
 }
 
 /* HEADER */
@@ -8,7 +24,7 @@ html {
 header {
   align-items: center;
   /*border-bottom: 1px solid black;*/
-  color: #4A4A4A;
+  /*color: #4A4A4A;*/
   display: flex;
   height: 64px;
   justify-content: space-between;
@@ -34,4 +50,50 @@ header ul {
 
 header li {
   padding-left: 16px;
+}
+
+
+/* MAIN */
+
+main {
+
+}
+
+main:nth-child(2n+0) {
+  background-color: #D8D8D8;
+}
+
+/* Jumbotron */
+
+#jumbotron {
+  display: flex;
+  padding: 32px 24px;
+}
+
+#jumbotron div:first-child {
+  /*width: 60%;*/
+  /*overflow: hidden;*/
+}
+
+#jumbotron img {
+  /*height: auto;*/
+  /*width: 60%;*/
+  max-width: 100%;
+  /*display: block;*/
+  /*height: auto;*/
+}
+
+#jumbotron div:last-child {
+  /*align-items: center;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 40px;
+}
+
+#jumbotron button {
+  background-color: #4A4A4A;
+  border: none;
+  color: white;
+  padding: 8px;
 }
