@@ -1,0 +1,37 @@
+/* HTML */
+html {
+  /*font-size: 16px;*/
+}
+
+/* HEADER */
+
+header {
+  align-items: center;
+  /*border-bottom: 1px solid black;*/
+  color: #4A4A4A;
+  display: flex;
+  height: 64px;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+
+header div {
+  display: flex;
+}
+
+header figure {
+  align-items: center;
+  display: flex;
+}
+
+header span {
+  color: #9B9B9B;
+}
+
+header ul {
+  display: flex;
+}
+
+header li {
+  padding-left: 16px;
+}
