@@ -19,6 +19,10 @@ html {
   height: auto;
 }
 
+.wrapper img {
+  max-width: 100%;
+}
+
 /* HEADER */
 
 header {
@@ -164,4 +168,45 @@ main section:nth-child(odd) {
 
 #information a {
   margin-top: 25px;
+}
+
+/* Courses */
+
+#courses {
+  padding-top: 32px;
+}
+
+#courses h2 {
+  margin-bottom: 16px;
+
+  text-align: center;
+}
+
+#courses > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.course {
+  background-color: white;
+  /*height: 268px;*/
+  margin: 16px;
+}
+
+.course .wrapper {
+  /*height: 180px;*/
+}
+
+.course img {
+  max-height: 100%;
+}
+
+.course div:last-child {
+  padding: 16px;
+}
+
+.course p {
+  margin: 8px 0;
 }
