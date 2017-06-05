@@ -63,7 +63,8 @@ main {
   background-color: #F3F5F5;
 }
 
-main section:nth-child(odd) {
+main section:nth-child(odd),
+#thesis aside li:nth-child(odd) {
   background-color: #D8D8D8;
 }
 
@@ -209,4 +210,56 @@ main section:nth-child(odd) {
 
 .course p {
   margin: 8px 0;
+}
+
+/* Thesis */
+
+#thesis {
+  padding: 0 0 32px 24px;
+}
+
+#thesis h2 {
+  margin: 32px;
+  text-align: center;
+}
+
+#thesis .container {
+  display: flex;
+}
+
+#thesis .container div div:last-child {
+  padding-top: 24px;
+}
+
+#thesis .container video,
+#thesis .container img {
+  max-width: 100%;
+}
+
+#thesis aside {
+  margin-left: 24px;
+  /*padding-top: 32px;*/
+  min-width: 423px;
+}
+
+#thesis aside .wrapper {
+  padding-right: 24px;
+  width: 35%;
+}
+
+#thesis aside img {
+  max-width: 100%;
+}
+
+#thesis li {
+  /*border-bottom: 1px solid #D8D8D8;*/
+  display: flex;
+  padding: 16px 0 16px 16px;
+}
+
+#thesis li div:last-child {
+  /*align-items: center;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
