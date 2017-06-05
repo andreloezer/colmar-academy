@@ -11,7 +11,7 @@ html {
 }
 
 .container {
-  width: 60%;
+  /*width: 60%;*/
   overflow: hidden;
 }
 
@@ -56,10 +56,10 @@ header li {
 /* MAIN */
 
 main {
-
+  background-color: #F3F5F5;
 }
 
-main:nth-child(2n+0) {
+main section:nth-child(odd) {
   background-color: #D8D8D8;
 }
 
@@ -71,7 +71,7 @@ main:nth-child(2n+0) {
 }
 
 #jumbotron div:first-child {
-  /*width: 60%;*/
+  width: 60%;
   /*overflow: hidden;*/
 }
 
@@ -96,4 +96,72 @@ main:nth-child(2n+0) {
   border: none;
   color: white;
   padding: 8px;
+}
+
+/* Information */
+
+#information {
+  display: flex;
+  padding: 0 0 0 24px;
+}
+
+#information .container {
+  margin-top: 32px
+}
+
+#information .container img {
+  max-width: 100%;
+}
+
+#information > div > div:last-child {
+  padding-top: 32px;
+}
+
+#information > div > div:last-child p {
+  margin: 40px 0;
+}
+
+#information blockquote {
+  margin-top: 24px;
+}
+
+#information aside {
+  border-left: 1px solid #D8D8D8;
+  margin-left: 24px;
+  padding-top: 32px;
+  min-width: 423px;
+}
+
+#information aside .wrapper {
+  padding-right: 24px;
+  width: 35%;
+}
+
+#information aside img {
+  max-width: 100%;
+}
+
+#information li {
+  border-bottom: 1px solid #D8D8D8;
+  display: flex;
+  padding: 16px 0 16px 16px;
+}
+
+#information li:first-child {
+  padding-top: 0;
+}
+
+#information li:last-child {
+  background-color: #D8D8D8;
+}
+
+#information li div:last-child {
+  /*align-items: center;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#information a {
+  margin-top: 25px;
 }
