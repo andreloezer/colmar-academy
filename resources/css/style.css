@@ -18,6 +18,7 @@ aside { /* Information and Thesis sections */
   min-width: 30rem;
 }
 
+aside picture,
 aside .wrapper { /* Information and Thesis sections */
   padding-right: 1.5rem;
   width: 35%;
@@ -54,6 +55,12 @@ p {
   line-height: 1.5em
 }
 
+footer .desktop a,
+header .desktop a {
+  color: inherit;
+  margin-left: 1rem;
+}
+
 img,
 video /* Thesis section */ {
   max-width: 100%;
@@ -71,6 +78,10 @@ video /* Thesis section */ {
 
 .horizontal-center {
   justify-content: center;
+}
+
+.mobile {
+  display: none;
 }
 
 .moldure { /* Border of the page */
@@ -98,10 +109,22 @@ header span { /* Title color change */
   color: #9B9B9B;
 }
 
-footer a,
-header a {
-  color: inherit;
-  margin-left: 1rem;
+header .mobile{
+  height: auto;
+  width: 100%;
+}
+
+header .mobile img {
+  width: 2rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: flex;
+  }
 }
 
 
@@ -129,6 +152,41 @@ main section:nth-child(odd),
 
 #jumbotron div:last-child h3 {
   margin-top: 3rem;
+}
+
+@media only screen and (max-width: 900px) {
+  #jumbotron {
+    flex-direction: column;
+    padding: 0;
+  }
+  #jumbotron div:first-child { /* Banner */
+    height: 11.25rem;
+    overflow: hidden;
+    width: 100%;
+  }
+  #jumbotron div:first-child img { /* Banner image */
+    width: 100%;
+  }
+  #jumbotron div:last-child { /* Jumbotron text */
+    padding: 2rem 0;
+    width: 100%;
+    /*min-width: 29rem;*/
+  }
+  h2,
+  h3,
+  button {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    max-width: 100%;
+  }
+
+  #jumbotron div:last-child button {
+    margin-top: 1.5rem;
+  }
+
+  #jumbotron div:last-child h3 {
+    margin-top: 2rem;
+  }
 }
 
 /* Information */
@@ -180,6 +238,70 @@ main section:nth-child(odd),
   margin-bottom: 1.5rem;
 }
 
+@media only screen and (max-width: 900px) {
+
+  #information {
+    background-color: #F3F5F5;
+    padding: 0;
+  }
+
+  #information .desktop {
+    display: none;
+  }
+
+  aside {
+    border: none;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+    width: 100%;
+  }
+
+  #information li {
+    /*align-items: center;*/
+    border: none;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+  }
+
+  /*#information .wrapper {
+    padding: 0;
+  }*/
+
+  #information picture {
+    padding: 0;
+    width: 100%;
+  }
+
+  #information img {
+    width: 100%;
+  }
+
+  #information li > div:last-child {
+    margin-bottom: ;
+    padding: 1rem;
+    /*padding-left: 1rem;*/
+  }
+
+  #information li div div {
+    margin-bottom: 1rem;
+  }
+
+  #information h3 {
+    margin: 0;
+  }
+
+  #information a,
+  #information p {
+    font-size: 1.4rem;
+  }
+
+  #information li:last-child { /* Text wrapper */
+    background-color: inherit;
+  }
+}
+
 /* Courses */
 
 #courses {
@@ -212,6 +334,31 @@ main section:nth-child(odd),
   margin: 0.5rem 0;
 }
 
+@media only screen and (max-width: 900px) {
+
+  #courses {
+    background-color: #F5F4F5;
+    border-top: 1px solid #E9EAEA;
+  }
+
+  #courses > div {
+    display: block;
+  }
+
+  .course {
+    background-color: #D8D8D8;
+    margin: 0.5rem auto;
+    max-width: none;
+    min-width: none;
+    width: 100%;
+  }
+
+  .course .wrapper,
+  .course p {
+    display: none;
+  }
+}
+
 /* Thesis */
 
 #thesis h2 {
@@ -235,6 +382,21 @@ main section:nth-child(odd),
   padding: 1rem 0 1rem 1rem;
 }
 
+@media only screen and (max-width: 900px) {
+
+  #thesis > div {
+    padding: 0
+  }
+
+  #thesis > .flex div div:last-child {
+    display: none;
+  }
+
+  #thesis aside {
+    display: none;
+  }
+}
+
 
 /* FOOTER */
 
@@ -248,4 +410,16 @@ footer div { /* Container */
   border-top: 1px solid #EAECEC;
   margin: 0 5px;
   padding: 1rem 1.5rem;
+}
+
+@media only screen and (max-width: 900px) {
+
+  footer {
+    padding: 1.5rem 0 0 0;
+  }
+
+  footer div {
+    border-top: none;
+    margin: 0;
+  }
 }

@@ -20,7 +20,7 @@
 
     <header class="flex space-between vertical-center">
 
-      <div> <!-- Logo -->
+      <div class="desktop"> <!-- Logo -->
         <figure class="flex vertical-center">
           <img src="./resources/images/ic-logo.svg" alt="Logo" />
           <h1>
@@ -29,11 +29,19 @@
         </figure>
       </div>
 
-      <nav> <!-- Site Navegation -->
+      <nav class="desktop"> <!-- Site Navegation -->
         <a href="#">On Campus</a>
         <a href="#">Online</a>
         <a href="#">Our companies</a>
         <a href="#">Sign in</a>
+      </nav>
+
+      <!-- Mobile Navegation -->
+      <nav class="mobile space-between vertical-center">
+        <a href="#"><img src="./resources/images/ic-logo.svg" alt="Logo" /></a>
+        <a href="#"><img src="./resources/images/ic-on-campus.svg" alt="On Campus" /></a>
+        <a href="#"><img src="./resources/images/ic-online.svg" alt="Online" /></a>
+        <a href="#"><img src="./resources/images/ic-login.svg" alt="Login" /></a>
       </nav>
 
     </header>
@@ -57,7 +65,8 @@
        <!-- Information -->
       <section id="information" class="flex">
 
-        <div> <!-- Main Information -->
+        <div class="desktop"> <!-- Main Information -->
+
           <div class="wrapper">
             <img src="./resources/images/information-main.jpg" alt="" />
           </div>
@@ -78,9 +87,14 @@
           <ul>
 
             <li class="flex"> <!-- Orientation box -->
-              <div class="wrapper">
+
+              <picture>
+                <source media="(max-width: 900px)" srcset="./resources/images/information-orientation-mobile.jpg"/>
                 <img src="./resources/images/information-orientation.jpg" alt="" />
-              </div>
+              </picture>
+              <!-- <div class="wrapper">
+                <img src="./resources/images/information-orientation.jpg" alt="" />
+              </div> -->
               <div class="column flex horizontal-center">
                 <div>
                   <h3>Orientation date</h3>
@@ -91,9 +105,14 @@
             </li>
 
             <li class="flex"> <!-- Our campus box -->
-              <div class="wrapper">
+
+              <picture>
+                <source media="(max-width: 900px)" srcset="./resources/images/information-campus-mobile.jpg"/>
                 <img src="./resources/images/information-campus.jpg" alt="" />
-              </div>
+              </picture>
+              <!-- <div class="wrapper">
+                <img src="./resources/images/information-campus.jpg" alt="" />
+              </div> -->
               <div class="column flex horizontal-center">
                 <div>
                   <h3>Our campus</h3>
@@ -104,9 +123,14 @@
             </li>
 
             <li class="flex"> <!-- Our guest lecture box -->
-              <div class="wrapper">
+
+              <picture>
+                <source media="(max-width: 900px)" srcset="./resources/images/information-guest-lecture-mobile.jpg"/>
                 <img src="./resources/images/information-guest-lecture.jpg" alt="" />
-              </div>
+              </picture>
+              <!-- <div class="wrapper">
+                <img src="./resources/images/information-guest-lecture.jpg" alt="" />
+              </div> -->
               <div class="column flex horizontal-center">
                 <div>
                   <h3>Our guest lecture</h3>
@@ -262,7 +286,7 @@
       <div class="flex space-between"> <!-- Container -->
         <h4>&copy; 2016 Colmar Academy. All rights reserved</h4>
 
-        <nav>
+        <nav class="desktop">
           <a href="#">Terms</a>
           <a href="#">Privacy</a>
         </nav>
