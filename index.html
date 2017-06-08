@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en-US">
+
   <head>
 
     <!-- Encoding UTF-8 -->
@@ -7,6 +9,13 @@
 
     <!-- Page Title -->
     <title>Colmar Academy</title>
+
+    <!-- Search Engine Optimization -->
+    <!-- Description -->
+    <meta name="description" content="The Colmar Academy is a school of web development offering courses on Software engineering, Data, Computer art, Design, Marketing and Business"/>
+
+    <!-- Keywords -->
+    <meta  name="keywords" content="ColmarAcademy, web development, education" />
 
     <!-- Icon -->
     <link rel="shortcut icon" href="./resources/images/ic-logo.ico" type="image/x-icon">
@@ -18,7 +27,7 @@
     <link href="./resources/css/style.css" rel="stylesheet" type="text/css" />
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=El+Messiri|Montserrat:400,700|Raleway|Roboto:700" rel="stylesheet">
 
   </head>
 
@@ -27,14 +36,13 @@
     <!-- HEADER -->
     <header>
 
-      <div class="desktop"> <!-- Logo -->
-        <figure>
-          <img src="./resources/images/ic-logo.svg" alt="Logo" />
-          <h1>
-            <a href="#">COLMAR<span>ACADEMY</span></a>
-          </h1>
-        </figure>
-      </div>
+      <!-- Logo -->
+      <figure class="desktop">
+        <img src="./resources/images/ic-logo.svg" alt="Logo" />
+        <h1>
+          <a href="#">COLMAR<span>ACADEMY</span></a>
+        </h1>
+      </figure>
 
       <nav class="desktop"> <!-- Desktop Navegation -->
         <a href="#">On Campus</a>
@@ -55,7 +63,7 @@
     <main>
 
        <!-- Jumbotron -->
-      <section id="jumbotron" class="section-container">
+      <section id="jumbotron">
 
         <picture> <!-- Banner -->
           <img src="./resources/images/banner.jpg" alt="Learn something new" />
@@ -70,13 +78,13 @@
       </section>
 
        <!-- Information -->
-      <section id="information" class="section-container">
+      <section id="information">
 
         <div class="desktop"> <!-- Main Information -->
 
-          <div class="wrapper">
+          <picture>
             <img src="./resources/images/information-main.jpg" alt="Keep practicing" />
-          </div>
+          </picture>
 
           <div>
             <h2>It doesn't hurt to keep praticing</h2>
@@ -144,13 +152,13 @@
       </section>
 
       <!-- Courses -->
-      <section id="course-section">
+      <section id="course">
 
         <h2>Start Learning</h2>
 
-        <div class="section-container"> <!-- Container for courses boxes -->
+        <ul> <!-- Container for courses boxes -->
 
-          <div class="course"> <!-- Software engineering -->
+          <li> <!-- Software engineering -->
             <picture class="desktop">
               <img src="./resources/images/course-software.jpg" alt="Software engineer course" />
             </picture>
@@ -163,9 +171,9 @@
                 Development, iOT, APIs</p>
               </div>
             </div>
-          </div>
+          </li>
 
-          <div class="course"> <!-- Computer art -->
+          <li> <!-- Computer art -->
             <picture class="desktop">
               <img src="./resources/images/course-computer-art.jpg" alt="Computer art course" />
             </picture>
@@ -179,9 +187,9 @@
                 Computer Animation</p>
               </div>
             </div>
-          </div>
+          </li>
 
-          <div class="course"> <!-- Design -->
+          <li> <!-- Design -->
             <picture class="desktop">
               <img src="./resources/images/course-design.jpg" alt="Design course" />
             </picture>
@@ -194,9 +202,9 @@
                 Research, Visual Design</p>
               </div>
             </div>
-          </div>
+          </li>
 
-          <div class="course"> <!-- Data -->
+          <li> <!-- Data -->
             <picture class="desktop">
               <img src="./resources/images/course-data.jpg" alt="Data course" />
             </picture>
@@ -209,9 +217,9 @@
                 Visualization</p>
               </div>
             </div>
-          </div>
+          </li>
 
-          <div class="course"> <!-- Business -->
+          <li> <!-- Business -->
             <picture class="desktop">
               <img src="./resources/images/course-business.jpg" alt="Business Course" />
             </picture>
@@ -224,9 +232,9 @@
                 Development, Startup</p>
               </div>
             </div>
-          </div>
+          </li>
 
-          <div class="course"> <!-- Marketing -->
+          <li> <!-- Marketing -->
             <picture class="desktop">
               <img src="./resources/images/course-marketing.jpg" alt="Marketing course" />
             </picture>
@@ -239,9 +247,9 @@
                 Mobile Marketing</p>
               </div>
             </div>
-          </div>
+          </li>
 
-        </div>
+        </ul>
       </section>
 
       <!-- Thesis -->
@@ -249,13 +257,11 @@
 
         <h2>Thesis exhibit</h2>
 
-        <div class="section-container">
+        <div>
 
           <div> <!-- Main 'thesis' -->
 
-            <picture> <!-- Video container -->
-              <video src="./resources/videos/thesis.mp4" alt="Time lapse of an computer animated building" autoplay muted loop></video>
-            </picture>
+            <video src="./resources/videos/thesis.mp4" alt="Time lapse of an computer animated building" autoplay muted loop>Your browser doesn't support the video. Here is a <a href="./resources/videos/thesis.mp4">link to the video</a> instead.</video>
 
             <div class="desktop"> <!-- Text container -->
               <h3>Reimagine urban</h3>
@@ -311,5 +317,7 @@
         </nav>
       </div>
     </footer>
+
   </body>
+
 </html>
