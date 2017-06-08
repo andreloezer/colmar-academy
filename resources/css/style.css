@@ -32,7 +32,7 @@ a {
 
 aside { /* Information and Thesis sections */
   margin-left: 1.5rem;
-  min-width: 30rem;
+  width: 30rem;
 }
 
 aside picture { /* Information and Thesis sections */
@@ -141,6 +141,27 @@ video /* Thesis section */ {
   max-width: 100%;
 }
 
+@media only screen and (min-width: 900px) {
+
+  aside { /* Information and Thesis sections */
+    min-width: 30rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+
+  h2 {
+    font-size: 2rem;
+    line-height: 1.3em;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+    line-height: 1.2em;
+  }
+}
+
+
 /* CLASSES */
 
 .aside-text {
@@ -224,6 +245,7 @@ header a svg:focus .login {
 }
 
 @media only screen and (max-width: 1328px) { /* 1280 + 1.5 x 16 x 2 */
+
   header figure,
   header nav {
     padding: 0 1.5rem;
@@ -253,13 +275,6 @@ main {
 
 main section:nth-child(odd) { /* Color switch between sections */
   background-color: var(--medium);
-}
-
-@media only screen and (max-width: 1280px) {
-  main {
-    border-left: none;
-    border-right: none;
-  }
 }
 
 /* Jumbotron */
@@ -333,6 +348,13 @@ main section:nth-child(odd) { /* Color switch between sections */
 
   #jumbotron h3 {
     margin-top: 2rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+
+  #jumbotron{
+    padding-bottom: 0;
   }
 }
 
@@ -441,6 +463,18 @@ main section:nth-child(odd) { /* Color switch between sections */
   }
 }
 
+@media only screen and (max-width: 400px) {
+
+  #information li {
+    padding: 1rem 1rem;
+  }
+
+  #information li a,
+  #information li p {
+    font-size: 1rem;
+  }
+}
+
 /* Courses */
 
 #course {
@@ -464,7 +498,7 @@ main section:nth-child(odd) { /* Color switch between sections */
   display: block;
   margin: 1rem;
   max-width: 30rem;
-  min-width: 20rem;
+  width: 20rem;
   transition: background-color 400ms ease 200ms,
               color 400ms ease 200ms;
   width: 30%;
@@ -500,6 +534,13 @@ main section:nth-child(odd) { /* Color switch between sections */
   }
 }
 
+@media only screen and (max-width: 400px) {
+
+  #course {
+    padding-bottom: 0;
+  }
+}
+
 /* Thesis */
 
 #thesis h2 {
@@ -510,10 +551,6 @@ main section:nth-child(odd) { /* Color switch between sections */
 #thesis > div { /* Main 'thesis' (Everithing besides the h2) */
   display: flex;
   padding: 0 1.5rem 2rem 1.5rem;
-}
-
-#thesis .desktop { /* Main 'thesis' text container */
-  padding-top: 1.5rem;
 }
 
 #thesis blockquote { /* Quote */
