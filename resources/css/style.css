@@ -5,6 +5,8 @@ html {
 
   /* Color variables */
   --bright: #FAFAFA;
+  /*--header: #EFEFEF;*/
+  --header: #EAEAEA;
   --medium: #7695AB;
   --featured: #FFA213;
   --dark: #191919;
@@ -14,6 +16,9 @@ html {
   --main-text: 'Roboto', Verdana, sans-serif;
   --course: 'Raleway', Verdana, sans-serif;
   --quote: 'El Messiri', sans-serif;
+
+  /* Container variable */
+  --container: 1280px;
 
   color: var(--dark);
   font-family: var(--main-text);
@@ -45,11 +50,15 @@ blockquote {
 }
 
 body {
-  background-color: var(--bright);
+  background-color: var(--dark);
 }
 
-h1 a {
-  color: inherit;
+h1 {
+  font-size: 2rem;
+}
+
+a h1 {
+  color: var(--dark);
 }
 
 h2 {
@@ -88,7 +97,7 @@ nav {
 
 header nav a,
 footer nav a {
-  transition: color 400ms ease 200ms;
+  transition: color 400ms ease 100ms;
 }
 
 header nav a:hover,
@@ -97,7 +106,7 @@ footer nav a:hover {
 }
 
 p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5em
 }
 
@@ -132,7 +141,6 @@ video /* Thesis section */ {
   justify-content: center;
 }
 
-
 .mobile { /* display only in widths bellow 900px */
   display: none;
 }
@@ -152,8 +160,9 @@ video /* Thesis section */ {
 /* HEADER */
 
 header {
-  background-color: var(--bright);
-  border-bottom: 1px solid var(--dark);
+  /*background-color: var(--bright);*/
+  background-color: var(--header);
+  /*border-bottom: 1px solid var(--medium);*/
   font-size: 1.4rem;
   height: 4rem;
   position: fixed;
@@ -161,13 +170,27 @@ header {
   width: 100%;
 }
 
-header figure,
-header nav {
-  padding: 0 1.5rem;
+header div {
+  align-items: center;
+  /*border-bottom: 1px solid var(--medium);*/
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: var(--container);
+  width: var(--container);
+}
+
+header figure a {
+  align-items: center;
+  display: flex;
 }
 
 header span { /* Title color change */
   color: var(--featured);
+}
+
+header nav a {
+  font-size: 1.2rem;
 }
 
 header .mobile{
@@ -177,8 +200,19 @@ header .mobile{
   width: 100%;
 }
 
-header .mobile img {
+header img {
   width: 2.5rem;
+}
+
+header a img {
+  height: 3rem;
+}
+
+@media only screen and (max-width: 1328px) { /* 1280 + 1.5 x 16 x 2 */
+  header figure,
+  header nav {
+    padding: 0 1.5rem;
+  }
 }
 
 @media only screen and (max-width: 900px) {
@@ -195,6 +229,9 @@ header .mobile img {
 
 footer,
 main {
+  background-color: var(--bright);
+  max-width: var(--container);
+  margin: 0 auto;
   top: 4rem;
   position: relative;
 }
@@ -203,19 +240,28 @@ main section:nth-child(odd) { /* Color switch between sections */
   background-color: var(--medium);
 }
 
+@media only screen and (max-width: 1280px) {
+  main {
+    border-left: none;
+    border-right: none;
+  }
+}
+
 /* Jumbotron */
 
 #jumbotron {
   display: flex;
-  padding: 2rem 1.5rem;
+  padding: 2rem 0;
 }
 
 #jumbotron picture { /* Banner */
+  padding-left: 1.5rem;
   width: 60%;
 }
 
 #jumbotron div { /* Jumbotron text */
   padding-left: 2.5rem;
+  padding-right: 1.5rem;
   width: 29rem;
 }
 
@@ -247,13 +293,13 @@ button:focus {
 
   #jumbotron {
     flex-direction: column;
-    padding: 0;
+    padding: 0 0 2rem 0;
   }
 
   #jumbotron picture { /* Banner */
-    /*height: 11.25rem;*/
     height: 15rem;
     overflow: hidden;
+    padding: 0;
   }
 
   #jumbotron picture,
@@ -286,11 +332,11 @@ button:focus {
 
 #information {
   display: flex;
-  padding: 0 0 0 1.5rem;
 }
 
 #information > div { /* Main Information */
-  margin-top: 2rem
+  margin-top: 2rem;
+  padding-left: 1.5rem;
 }
 
 #information > div > div:last-child {
@@ -311,22 +357,16 @@ button:focus {
 }
 
 #information aside { /* Aside Information */
-  /*border-left: 1px solid var(--medium);*/
   padding-top: 1rem;
 }
 
 #information li { /* Information Boxes */
-  /*border-bottom: 1px solid var(--medium);*/
   padding: 1rem 0 1rem 1rem;
 }
 
 #information li div div {
   margin-bottom: 1.5rem;
   padding-right: 1.5rem;
-}
-
-#information li p {
-  font-size: 1rem;
 }
 
 #information a {
@@ -345,8 +385,8 @@ button:focus {
     padding: 0;
   }
 
-  aside { /* Becomes the main content of the section */
-    padding-bottom: 1rem;
+  #information aside { /* Becomes the main content of the section */
+    padding-top: 0;
     width: 100%;
   }
 
@@ -363,7 +403,7 @@ button:focus {
 
   #information li {
     justify-content: center;
-    padding: 0.5rem 1rem;
+    padding: 2rem 1rem;
   }
 
   #information li > div:last-child {
@@ -387,10 +427,6 @@ button:focus {
     font-size: 1.4rem;
   }
 
-  #information li:last-child { /* Last box is no more in evidence */
-    background-color: inherit;
-  }
-
   button {
     font-size: 2rem;
   }
@@ -399,7 +435,7 @@ button:focus {
 /* Courses */
 
 #course {
-  padding: 2rem;
+  padding: 2rem 0;
 }
 
 #course h2 {
@@ -411,6 +447,7 @@ button:focus {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 0 1rem;
 }
 
 #course li { /* Courses boxes */
@@ -442,7 +479,6 @@ button:focus {
 
   #course {
     background-color: var(--bright);
-    border-top: 1px solid var(--medium);
   }
 
   #course li {
@@ -457,13 +493,13 @@ button:focus {
 /* Thesis */
 
 #thesis h2 {
-  margin: 2rem;
+  padding: 2rem;
   text-align: center;
 }
 
 #thesis > div { /* Main 'thesis' (Everithing besides the h2) */
   display: flex;
-  padding: 0 0 2rem 1.5rem;
+  padding: 0 1.5rem 2rem 1.5rem;
 }
 
 #thesis .desktop { /* Main 'thesis' text container */
@@ -494,7 +530,8 @@ footer {
 }
 
 footer div { /* Container */
-  border-top: 1px solid var(--medium);
+  /*border-top: 1px solid var(--medium);*/
+  border-top: 1px solid var(--header);
   margin: 0 1%;
   padding: 1rem 1.5rem;
 }
