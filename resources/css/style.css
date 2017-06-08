@@ -4,14 +4,14 @@
 html {
 
   /* Color variables */
-  --bright: #EAF8DA;
-  --medium: #AFE971;
-  --featured: #FF7A00;
-  --dark: #142600;
+  --bright: #FAFAFA;
+  --medium: #7695AB;
+  --featured: #FFA213;
+  --dark: #191919;
 
   /* Font family variables */
-  --heading: 'Roboto', Verdana, sans-serif;
-  --main-text: 'Montserrat', Verdana, sans-serif;
+  --heading: 'Montserrat', Verdana, sans-serif;
+  --main-text: 'Roboto', Verdana, sans-serif;
   --course: 'Raleway', Verdana, sans-serif;
   --quote: 'El Messiri', sans-serif;
 
@@ -23,13 +23,7 @@ html {
 /* ELEMENTS */
 
 a {
-  color: var(--featured);
   text-decoration: none;
-  transition: font-weight 200ms; /* Only the delay works */
-}
-
-a:hover {
-  font-weight: bold;
 }
 
 aside { /* Information and Thesis sections */
@@ -62,13 +56,13 @@ h2 {
   font-family: var(--heading);
   font-size: 3rem;
   font-weight: bold;
-  line-height: 1.5em;
+  line-height: 1.3em;
 }
 
 h3 {
   font-size: 2rem;
   font-weight: bold;
-  line-height: 1.5em;
+  line-height: 1.2em;
 }
 
 li {
@@ -86,6 +80,20 @@ transition: background-color 600ms ease 200ms;
 
 aside li:hover {
   background-color: var(--medium);
+}
+
+nav {
+  font-weight: bold;
+}
+
+header nav a,
+footer nav a {
+  transition: color 400ms ease 200ms;
+}
+
+header nav a:hover,
+footer nav a:hover {
+  color: var(--featured);
 }
 
 p {
@@ -215,6 +223,26 @@ main section:nth-child(odd) { /* Color switch between sections */
   margin-top: 3rem;
 }
 
+button {
+  background-color:  var(--dark);
+  border: none;
+  color: var(--bright);
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  padding: 1rem;
+  transition: background-color 400ms ease 200ms,
+              color 400ms ease 200ms;
+}
+
+button:hover {
+  background-color: var(--bright);
+  color: var(--featured);
+}
+
+button:focus {
+  outline: 0;
+}
+
 @media only screen and (max-width: 900px) {
 
   #jumbotron {
@@ -283,12 +311,12 @@ main section:nth-child(odd) { /* Color switch between sections */
 }
 
 #information aside { /* Aside Information */
-  border-left: 1px solid var(--medium);
+  /*border-left: 1px solid var(--medium);*/
   padding-top: 1rem;
 }
 
 #information li { /* Information Boxes */
-  border-bottom: 1px solid var(--medium);
+  /*border-bottom: 1px solid var(--medium);*/
   padding: 1rem 0 1rem 1rem;
 }
 
@@ -298,27 +326,16 @@ main section:nth-child(odd) { /* Color switch between sections */
 }
 
 #information li p {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
-button {
-  background-color:  var(--dark);
-  border: none;
-  color: var(--bright);
-  font-size: 1.5rem;
-  margin-top: 3rem;
-  padding: 1rem;
-  transition: background-color 400ms ease 200ms,
-              color 400ms ease 200ms;
-}
-
-button:hover {
-  background-color: var(--bright);
+#information a {
   color: var(--featured);
+  transition: font-weight 200ms;
 }
 
-button:focus {
-  outline: 0;
+#information a:hover {
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 900px) {
@@ -365,8 +382,8 @@ button:focus {
     width: 100%;
   }
 
-  #information a,
-  #information p {
+  #information li a,
+  #information li p {
     font-size: 1.4rem;
   }
 
@@ -480,6 +497,10 @@ footer div { /* Container */
   border-top: 1px solid var(--medium);
   margin: 0 1%;
   padding: 1rem 1.5rem;
+}
+
+footer a {
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 900px) {
