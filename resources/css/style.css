@@ -5,7 +5,6 @@ html {
 
   /* Color variables */
   --bright: #FAFAFA;
-  /*--header: #EFEFEF;*/
   --header: #EAEAEA;
   --medium: #7695AB;
   --featured: #FFA213;
@@ -83,12 +82,19 @@ li:hover {
   cursor: pointer;
 }
 
+button:focus,
+li:focus {
+  outline: 0;
+}
+
 aside li {
 transition: background-color 600ms ease 200ms;
 }
 
-aside li:hover {
+aside li:hover,
+aside li:focus {
   background-color: var(--medium);
+  outline: 0;
 }
 
 nav {
@@ -101,7 +107,9 @@ footer nav a {
 }
 
 header nav a:hover,
-footer nav a:hover {
+header nav a:focus,
+footer nav a:hover,
+footer nav a:focus {
   color: var(--featured);
 }
 
@@ -160,9 +168,7 @@ video /* Thesis section */ {
 /* HEADER */
 
 header {
-  /*background-color: var(--bright);*/
   background-color: var(--header);
-  /*border-bottom: 1px solid var(--medium);*/
   font-size: 1.4rem;
   height: 4rem;
   position: fixed;
@@ -172,7 +178,6 @@ header {
 
 header div {
   align-items: center;
-  /*border-bottom: 1px solid var(--medium);*/
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -200,12 +205,22 @@ header .mobile{
   width: 100%;
 }
 
-header img {
+header img,
+header a svg {
+  height: 3rem;
   width: 2.5rem;
 }
 
-header a img {
-  height: 3rem;
+header a svg:hover .logo,
+header a svg:focus .logo,
+header a svg:hover .on-campus,
+header a svg:focus .on-campus,
+header a svg:hover .online,
+header a svg:focus .online,
+header a svg:hover .login,
+header a svg:focus .login {
+  fill: var(--featured);
+  transition: fill 400ms ease 100ms;
 }
 
 @media only screen and (max-width: 1328px) { /* 1280 + 1.5 x 16 x 2 */
@@ -269,7 +284,7 @@ main section:nth-child(odd) { /* Color switch between sections */
   margin-top: 3rem;
 }
 
-button {
+#jumbotron button {
   background-color:  var(--dark);
   border: none;
   color: var(--bright);
@@ -280,13 +295,10 @@ button {
               color 400ms ease 200ms;
 }
 
-button:hover {
+#jumbotron button:hover,
+#jumbotron button:focus {
   background-color: var(--bright);
   color: var(--featured);
-}
-
-button:focus {
-  outline: 0;
 }
 
 @media only screen and (max-width: 900px) {
@@ -317,10 +329,6 @@ button:focus {
     margin-left: 1rem;
     margin-right: 1rem;
     max-width: 100%;
-  }
-
-  #jumbotron button {
-    margin-top: 1.5rem;
   }
 
   #jumbotron h3 {
@@ -374,7 +382,8 @@ button:focus {
   transition: font-weight 200ms;
 }
 
-#information a:hover {
+#information a:hover,
+#information a:focus {
   font-weight: bold;
 }
 
@@ -461,7 +470,8 @@ button:focus {
   width: 30%;
 }
 
-#course li:hover { /* Courses boxes */
+#course li:hover,
+#course li:focus { /* Courses boxes */
   background-color: var(--dark);
   color: var(--bright);
 }
@@ -526,11 +536,10 @@ button:focus {
 
 footer {
   background-color: var(--bright);
-  padding-bottom: 2.5rem;
+  padding: 0 0 2.5rem 0;
 }
 
 footer div { /* Container */
-  /*border-top: 1px solid var(--medium);*/
   border-top: 1px solid var(--header);
   margin: 0 1%;
   padding: 1rem 1.5rem;
