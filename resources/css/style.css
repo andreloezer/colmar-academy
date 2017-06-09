@@ -106,10 +106,10 @@ footer nav a {
   transition: color 400ms ease 100ms;
 }
 
-header nav a:hover,
-header nav a:focus,
-footer nav a:hover,
-footer nav a:focus {
+header nav.desktop a:hover,
+header nav.desktop a:focus,
+footer nav.desktop a:hover,
+footer nav.desktop a:focus {
   color: var(--featured);
 }
 
@@ -141,7 +141,7 @@ video /* Thesis section */ {
   max-width: 100%;
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 901px) {
 
   aside { /* Information and Thesis sections */
     min-width: 30rem;
@@ -232,14 +232,8 @@ header a svg {
   width: 2.5rem;
 }
 
-header a svg:hover .logo,
-header a svg:focus .logo,
-header a svg:hover .on-campus,
-header a svg:focus .on-campus,
-header a svg:hover .online,
-header a svg:focus .online,
-header a svg:hover .login,
-header a svg:focus .login {
+header .desktop svg:hover .logo,
+header .desktop svg:focus .logo {
   fill: var(--featured);
   transition: fill 400ms ease 100ms;
 }
