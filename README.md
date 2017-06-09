@@ -3,7 +3,9 @@ Colmar Academy
 
 Capstone Project *Colmar Academy*, of the *Freelance Website Development* course from **Codecademy**.
 
-**GitHub Pages**: https://andreloezer.github.io/colmar-academy/
+#### GitHub Pages
+
+https://andreloezer.github.io/colmar-academy/
 
 Description
 -----------
