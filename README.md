@@ -28,10 +28,10 @@ CSS Variables were used in order to facilitate experimenting with styles for `fo
 
 #### Font Family:
 
-- **Headings**:     *Montserrat* - The inviting aesthetics is a good fit for headings, drawing the reader's attention.
-- **Main text**:    *Roboto* - Simple, yet enjoyable. Good fit for the main text.
-- **Course boxes**: *Raleway* - Clean and direct. Has a professional approach.
-- **Quotes**:       *El Messiri* - Its eccentricity is ideal for quotes, differentiating them from the main text.
+- **Headings**:     *Montserrat* - The inviting aesthetics is a good fit for headings, drawing the reader's attention
+- **Main text**:    *Roboto* - Simple, yet enjoyable. Good fit for the main text
+- **Course boxes**: *Raleway* - Clean and direct. Has a professional approach
+- **Quotes**:       *El Messiri* - Its eccentricity is ideal for quotes, differentiating them from the main text
 
 ### **Color**
 
@@ -74,4 +74,4 @@ The *container*'s width is 1280 pixels (common screen size). The `background-col
 
 #### Mobile
 
-Media queries provides the *mobile* version for screen widths equals or bellow 900 pixels it will render the page as *mobile*. Smallest screens 400 pixels or bellow have specific positioning and sizing for some elements.
+Media queries provides the *mobile* version for screen widths equals or below 900 pixels it will render the page as *mobile*. Smallest screens 400 pixels or below have specific positioning and sizing for some elements.
