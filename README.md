@@ -74,4 +74,4 @@ The *container*'s width is 1280 pixels (common screen size). The `background-col
 
 #### Mobile
 
-Media queries were used to provide the *mobile* version, for screen widths equals or bellow 900 pixels it will render the page as *mobile*. Smallest screens 400 pixels or bellow have specific positioning and sizing for some elements.
+Media queries provides the *mobile* version for screen widths equals or bellow 900 pixels it will render the page as *mobile*. Smallest screens 400 pixels or bellow have specific positioning and sizing for some elements.
