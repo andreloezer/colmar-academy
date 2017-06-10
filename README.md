@@ -73,7 +73,7 @@ Various elements of the page have transitions on both `:hover` and `:focus`. The
 - Boxes (boxes from the aside have the same transitions)
 
 The *SVG* icon of the Logo from the *header* were inserted inside the HTML as an `<svg>` tag, allowing for color transitions.
-On mobile version all the *header* icons inside nav are placed by `<img>` tags, transitions here caused issues with Chrome and Firefox.
+On mobile version the *header* icons inside `<nav>` are placed by `<img>` tags, (here the transitions on `<svg>` tags caused issues with Chrome and Firefox), the color animation was moved to the tag `<a>` that serves as background to the icons.
 
 #### Sizing
 
