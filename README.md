@@ -59,7 +59,7 @@ The color pallet was inspired on the *Saffron Umbrella* pallet from the **Adobe 
 - **Featured**:  `#FFA213` Orange with medium brightness and high saturation. Used only in highlighted places like the logo, some links and transitions effects
 - **Dark**:      `#191919` Very dark gray intended primiraly as the color for the text. Also used as the outside of the main container and in transitions effects on the boxes in the *Courses* section
 
-### Overhall Design
+### Overall Design
 
 During development, some minors aspects of the positioning and details such as borders were changed for a more unique design. Although slightly different from the provided specs, these changes improve the visualization of the page.
 
