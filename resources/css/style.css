@@ -334,7 +334,7 @@ main section:nth-child(odd) { /* Color switch between sections */
 
   #jumbotron {
     flex-direction: column;
-    padding: 0 0 2rem 0;
+    padding: 0;
   }
 
   #jumbotron picture { /* Banner */
@@ -429,6 +429,7 @@ main section:nth-child(odd) { /* Color switch between sections */
   }
 
   #information aside { /* Becomes the main content of the section */
+    margin-top: 0;
     padding-top: 0;
     width: 100%;
   }
