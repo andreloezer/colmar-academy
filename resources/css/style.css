@@ -68,6 +68,7 @@ h3 {
 h2 {
   font-family: var(--heading);
   font-size: 3rem;
+  letter-spacing: 0.15rem;
   line-height: 1.3em;
 }
 
@@ -98,25 +99,23 @@ aside li:focus {
   outline: 0;
 }
 
+#information li,
+#thesis li { /* Information Boxes */
+  padding: 1rem 0 1rem 1rem;
+}
+
 nav {
   font-weight: bold;
 }
 
-header nav a,
-footer nav a {
+header a,
+footer a {
   transition: color 400ms ease 100ms;
-}
-
-header nav.desktop a:hover,
-header nav.desktop a:focus,
-footer nav.desktop a:hover,
-footer nav.desktop a:focus {
-  color: var(--featured);
 }
 
 p {
   font-size: 1.2rem;
-  line-height: 1.5em
+  line-height: 1.5em;
 }
 
 figure {
@@ -132,7 +131,7 @@ header nav a {
 li,
 header,
 header div,
-header figure a,
+figure a,
 figure,
 footer div,
 #jumbotron,
@@ -145,7 +144,7 @@ footer div,
 
 header,
 header div,
-header figure a,
+figure a,
 header .mobile,
 footer div {
   align-items: center;
@@ -192,6 +191,11 @@ video /* Thesis section */ {
   justify-content: center;
 }
 
+.desktop a:hover,
+.desktop a:focus {
+  color: var(--featured);
+}
+
 .mobile { /* display only in widths bellow 900px */
   display: none;
 }
@@ -225,11 +229,11 @@ header div {
   width: var(--container);
 }
 
-header span { /* Title color change */
+span { /* Title color change */
   color: var(--featured);
 }
 
-header nav a {
+header a {
   font-size: 1.2rem;
 }
 
@@ -238,13 +242,13 @@ header .mobile{
 }
 
 header img,
-header a svg {
+header svg {
   height: 3rem;
   width: 2.5rem;
 }
 
-header .desktop svg:hover .logo,
-header .desktop svg:focus .logo {
+svg:hover .logo,
+svg:focus .logo {
   fill: var(--featured);
   transition: fill 400ms ease 100ms;
 }
@@ -259,7 +263,7 @@ header .desktop svg:focus .logo {
 
 @media only screen and (max-width: 900px) {
 
-  header nav a {
+  header a {
     align-items: center;
     border-radius: 5px;
     display: flex;
@@ -267,8 +271,12 @@ header .desktop svg:focus .logo {
     transition: background-color 300ms ease 150ms;
   }
 
-  header nav a:hover,
-  header nav a:focus {
+  header a:first-child {
+    margin-left: 0;
+  }
+
+  header a:hover,
+  header a:focus {
     background-color: var(--featured);
   }
 }
@@ -281,8 +289,8 @@ main {
   background-color: var(--bright);
   max-width: var(--container);
   margin: 0 auto;
-  top: 4rem;
   position: relative;
+  top: 4rem;
 }
 
 main section:nth-child(odd) { /* Color switch between sections */
@@ -302,7 +310,7 @@ main section:nth-child(odd) { /* Color switch between sections */
   width: 60%;
 }
 
-#jumbotron div { /* Jumbotron text */
+hgroup { /* Jumbotron text */
   padding-left: 2.5rem;
   padding-right: 1.5rem;
   width: 29rem;
@@ -312,7 +320,7 @@ main section:nth-child(odd) { /* Color switch between sections */
   margin-top: 3rem;
 }
 
-#jumbotron button {
+button {
   background-color:  var(--dark);
   border: none;
   color: var(--bright);
@@ -324,8 +332,8 @@ main section:nth-child(odd) { /* Color switch between sections */
               color 400ms ease 200ms;
 }
 
-#jumbotron button:hover,
-#jumbotron button:focus {
+button:hover,
+button:focus {
   background-color: var(--bright);
   color: var(--featured);
 }
@@ -344,11 +352,11 @@ main section:nth-child(odd) { /* Color switch between sections */
   }
 
   #jumbotron picture,
-  #jumbotron div {
+  hgroup {
     width: 100%;
   }
 
-  #jumbotron div { /* Jumbotron text */
+  hgroup { /* Jumbotron text */
     padding: 2rem 0;
   }
 
@@ -380,11 +388,11 @@ main section:nth-child(odd) { /* Color switch between sections */
   padding-left: 1.5rem;
 }
 
-#information > div > div:last-child {
+#information .quote {
   padding-top: 2rem;
 }
 
-#information > div > div:last-child p {
+#information .quote p {
   margin: 2.5rem 0;
 }
 
@@ -399,14 +407,9 @@ main section:nth-child(odd) { /* Color switch between sections */
 
 #information aside { /* Aside Information */
   margin-top: 2rem;
-  /*padding-top: 1rem;*/
 }
 
-#information li { /* Information Boxes */
-  padding: 1rem 0 1rem 1rem;
-}
-
-#information li div div {
+#information .aside-text div {
   margin-bottom: 1.5rem;
   padding-right: 1.5rem;
 }
@@ -450,13 +453,9 @@ main section:nth-child(odd) { /* Color switch between sections */
     padding: 2rem 1rem;
   }
 
-  #information li > div:last-child {
-    padding: 1rem;
-  }
-
-  #information li div div {
+  #information .aside-text div {
     padding: 0;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
   }
 
   #information img,
@@ -466,7 +465,7 @@ main section:nth-child(odd) { /* Color switch between sections */
     width: 100%;
   }
 
-  #information li a,
+  #information a,
   #information li p {
     font-size: 1.4rem;
   }
@@ -482,7 +481,7 @@ main section:nth-child(odd) { /* Color switch between sections */
     padding: 1rem 1rem;
   }
 
-  #information li a,
+  #information a,
   #information li p {
     font-size: 1rem;
   }
@@ -524,11 +523,11 @@ main section:nth-child(odd) { /* Color switch between sections */
   color: var(--bright);
 }
 
-#course li > div:last-child { /* Courses box text */
+#course li > div { /* Courses box text */
   padding: 1rem;
 }
 
-#course li p { /* Text explaining the courses */
+#course p { /* Text explaining the courses */
   font-family: var(--course);
   margin: 0.5rem 0;
 }
@@ -562,7 +561,7 @@ main section:nth-child(odd) { /* Color switch between sections */
   padding: 0 0 2rem 1.5rem;
 }
 
-#thesis div.desktop {
+#thesis .quote {
   padding-top: 1.5rem;
 }
 
@@ -570,14 +569,10 @@ main section:nth-child(odd) { /* Color switch between sections */
   margin-top: 1rem;
 }
 
-#thesis li { /* Aside 'thesis' */
-  padding: 1rem;
-}
-
 @media only screen and (max-width: 900px) {
 
   #thesis > div {
-    padding: 0
+    padding: 0;
   }
 }
 
@@ -593,10 +588,6 @@ footer div { /* Container */
   border-top: 1px solid var(--header);
   margin: 0 1%;
   padding: 1rem 1.5rem;
-}
-
-footer a {
-  font-weight: bold;
 }
 
 @media only screen and (max-width: 900px) {
