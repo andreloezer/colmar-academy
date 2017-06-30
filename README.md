@@ -30,11 +30,11 @@ To provide a better enviroment for visually impared readers, the page follows th
 
 ### CSS
 
-The *CSS* is organized following *DRY* (Don't Repeat Yourseft) recommendation., with rules with multiple selectors and selecting general tags. Since classes and ids were focused on semantics weren't used to keep the code *DRY*.
+The *CSS* is organized following *DRY* (Don't Repeat Yourseft) recommendation, by using rules with multiple selectors and general tags. Since classes and ids focus on semantics they weren't used to keep the code *DRY*.
 
 #### Variables
 
-CSS Variables were used in order to facilitate experimenting with styles for `font-family`, `color`, `background color` and the main *container*. Variables were not used to define the maximum and minimum widths for media queries since vanilla CSS3 doesn't support variables in the selectors. In order to use such variables it would be necessary to use CSS plugins or addons, which was beyond the goal of this exercise.
+CSS Variables were used in order to facilitate experimenting with styles for `font-family`, `color`, `background color` and the main *container*. Variables were not used to define the maximum and minimum widths for media queries since vanilla CSS3 doesn't support then in the selectors. In order to use such variables it would be necessary to use CSS plugins or addons, which was beyond the goal of this exercise.
 
 ### Typography
 
